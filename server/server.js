@@ -1,14 +1,14 @@
-// IMPORT path module
-const path = require("path");
-const express = require("express");
-// IMPORT ApolloServer
-const { ApolloServer } = require("apollo-server-express");
+// import the path module
+const path = require('path');
+const express = require('express');
+// import ApolloServer
+const { ApolloServer } = require('apollo-server-express');
 // middle function for authentication
-const { authMiddleware } = require("./utils/auth");
+const { authMiddleware } = require('./utils/auth');
 
-// IMPORT our typeDefs and resolvers
-const { typeDefs, resolvers } = require("./schemas");
-const db = require("./config/connection");
+// import our typeDefs and resolvers
+const { typeDefs, resolvers } = require('./schemas');
+const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -24,15 +24,15 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-db.once("open", () => {
+db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);

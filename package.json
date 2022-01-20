@@ -1,7 +1,7 @@
 {
   "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. [Description](#desc) 2. [Web Address](#webaddress) 3. [Usage Tips](#usage) 4. [Features](#feature) 5. [Install Command](#command) 6. [Licenses](#licenses) 7. [Questions and Contributing](#qnacontri)",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -10,13 +10,22 @@
     "build": "cd client && npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cody Ktestakis",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "jest": "^27.4.7"
   },
   "dependencies": {
     "apollo-server-express": "^2.15.0",
     "graphql": "^16.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cktestakis/book-search-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cktestakis/book-search-engine/issues"
+  },
+  "homepage": "https://github.com/Cktestakis/book-search-engine#readme"
 }
