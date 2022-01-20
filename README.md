@@ -87,7 +87,7 @@ If you want to run locally perform the following:
 
 ### For Questions please reach out to Repo Owner :-
 
-- GitHub - https://github.com/hrsautomation20
+- GitHub - https://github.com/Cktesetakis
 - Email - [Cody Ktestakis](mailto:codyktestakis.com?subject=[GitHub]%20Source%20Han%20Sans)
 
 ### For Contributing
